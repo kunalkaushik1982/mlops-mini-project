@@ -114,6 +114,7 @@ def main():
             metrics = evaluate_model(clf, X_test, y_test)
             
             save_metrics(metrics, 'reports/metrics.json')
+            save_metrics(metrics, 'reports/model_info.json')
             
             # Log metrics to MLflow
             for metric_name, metric_value in metrics.items():
