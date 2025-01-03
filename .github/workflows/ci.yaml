@@ -84,4 +84,4 @@ jobs:
             docker pull 207948370590.dkr.ecr.us-east-1.amazonaws.com/mlflow_ecr:v1
             docker stop mlflow-app || true
             docker rm mlflow-app || true
-            docker run -d -p 80:5000 -e DAGSHUB_PAT=${{ secrets.DAGSHUB_PAT }} --name mlflow-app 207948370590.dkr.ecr.us-east-1.amazonaws.com/mlflow_ecr:latest
+            docker run -d -p 80:5000 -e DAGSHUB_PAT=${{ secrets.DAGSHUB_PAT }} --name mlflow-app 207948370590.dkr.ecr.us-east-1.amazonaws.com/mlflow_ecr:v1
